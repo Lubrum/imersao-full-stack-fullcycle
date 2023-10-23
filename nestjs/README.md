@@ -9,7 +9,7 @@ Repositório da API feita com Nest.js (API dos Bancos)
 ## Configurar /etc/hosts
 
 A comunicação entre as aplicações se dá de forma direta através da rede da máquina.
-Para isto é necessário configurar um endereços que todos os containers Docker consigam acessar.
+Para isto é necessário configurar um endereço que todos os containers Docker consigam acessar.
 
 Acrescente no seu /etc/hosts (para Windows o caminho é C:\Windows\system32\drivers\etc\hosts):
 ```
@@ -24,6 +24,8 @@ Execute os comandos:
 docker compose up
 
 ## Rodar banco BBX (dentro do container app)
+npm install
+
 BANK_CODE=001 npm run console fixtures
 BANK_CODE=001 npm run start:dev
 

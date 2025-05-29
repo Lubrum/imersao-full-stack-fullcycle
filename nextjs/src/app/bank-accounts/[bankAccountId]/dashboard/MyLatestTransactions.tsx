@@ -3,7 +3,6 @@
 import { green, red } from "@mui/material/colors";
 import { DataGrid, type GridColDef } from "@mui/x-data-grid";
 import { Transaction } from "../../../../models";
-import { useRouter } from "next/navigation";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 300 },

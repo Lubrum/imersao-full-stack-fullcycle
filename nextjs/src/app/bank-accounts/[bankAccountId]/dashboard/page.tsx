@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Grid2 from "@mui/material/Grid";
 import { CurrentBalance } from "../../../../components/CurrentBalance";
 import { CardAction } from "../../../../components/CardAction";
 import { MyLatestTransactions } from "./MyLatestTransactions";
@@ -35,13 +35,13 @@ export async function BankAccountDashboardPage({
   const transactions = await getTransactions(params.bankAccountId);
   return (
     <Grid2 container spacing={2}>
-      <Grid2 xs={12} lg={6}>
+      <Grid2 size={{ xs: 12, lg: 6}}>
         <div>
           <CurrentBalance bankAccountId={params.bankAccountId} />
         </div>
       </Grid2>
-      <Grid2 container xs={12} lg={6} spacing={1}>
-        <Grid2 xs={6}>
+      <Grid2 size={{ xs: 12, lg: 6}} spacing={1}>
+        <Grid2 size={{ xs: 6}}>
           <Link
             href={`/bank-accounts/${params.bankAccountId}/withdraw`}
             style={{ textDecoration: "none" }}
@@ -53,7 +53,7 @@ export async function BankAccountDashboardPage({
             </CardAction>
           </Link>
         </Grid2>
-        <Grid2 xs={6}>
+        <Grid2 size={{ xs: 6}}>
           <Link
             href={`/bank-accounts/${params.bankAccountId}/pix`}
             style={{ textDecoration: "none" }}
@@ -66,7 +66,7 @@ export async function BankAccountDashboardPage({
           </Link>
         </Grid2>
       </Grid2>
-      <Grid2 xs={12}>
+      <Grid2 size={{ xs: 12}}>
         <Typography variant="h5">Últimos lançamentos</Typography>
         <MyLatestTransactions transactions={transactions} />
       </Grid2>

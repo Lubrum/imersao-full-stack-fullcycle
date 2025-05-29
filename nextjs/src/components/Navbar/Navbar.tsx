@@ -3,9 +3,9 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import { NavbarBankAccount } from "./NavbarBankAccount";
 import { cookies } from "next/headers";
 
-export function Navbar() {
+export async function Navbar() {
   const cookiesStore = cookies();
-  const bankAccountId = cookiesStore.get("bankAccountId")?.value;
+  const bankAccountId = (await cookiesStore).get("bankAccountId")?.value;
   return (
     <AppBar position="fixed">
       <Toolbar sx={{ backgroundColor: "primary" }}>

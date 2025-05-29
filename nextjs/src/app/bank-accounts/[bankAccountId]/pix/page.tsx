@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Grid2 from "@mui/material/Grid";
 import { PixKeyList } from "./PixKeyList";
 import { RegisterPixKeyForm } from "./RegisterPixKeyForm";
 
@@ -11,10 +11,10 @@ export function MyPixDashboardPage({
   return (
     <Box>
       <Grid2 container spacing={8}>
-        <Grid2 xs={12} sm={6}>
+        <Grid2 size={{ xs: 12, sm: 6}}>
           <RegisterPixKeyForm bankAccountId={params.bankAccountId} />
         </Grid2>
-        <Grid2 xs={12} sm={6}>
+        <Grid2 size={{ xs: 12, sm: 6}}>
           <div>
             <PixKeyList bankAccountId={params.bankAccountId} />
           </div>

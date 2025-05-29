@@ -1,4 +1,4 @@
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Grid2 from "@mui/material/Grid";
 import { PropsWithChildren } from "react";
 import { Card } from "./Card";
 import { Button, SxProps, Theme } from "@mui/material";
@@ -13,12 +13,11 @@ export function CardAction(props: PropsWithChildren<CardActionProps>) {
   return (
     <Card>
       <Grid2 container spacing={2}>
-        <Grid2 xs={12} sm={9} sx={props.sx}>
+        <Grid2 size={{ xs: 12, sm: 6}} sx={props.sx}>
           {props.children}
         </Grid2>
         <Grid2
-          xs={12}
-          sm={3}
+          size={{ xs: 12, sm: 6}}
           display={"flex"}
           alignItems={"center"}
           justifyContent={"flex-end"}

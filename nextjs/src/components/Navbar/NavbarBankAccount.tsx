@@ -30,7 +30,7 @@ export async function NavbarBankAccount({
       <form
         action={async () => {
           "use server";
-          cookies().delete("bankAccountId");
+          (await cookies()).delete("bankAccountId");
           redirect("/");
         }}
         style={{ all: "unset"}}

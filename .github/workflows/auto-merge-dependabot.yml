@@ -3,6 +3,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   automerge:
     if: github.actor == 'dependabot[bot]'

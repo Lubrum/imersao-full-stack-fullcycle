@@ -23,7 +23,7 @@
   "dependencies": {
     "@grpc/grpc-js": "^1.13.4",
     "@grpc/proto-loader": "^0.7.15",
-    "@nestjs/common": "^11.1.2",
+    "@nestjs/common": "^11.1.17",
     "@nestjs/config": "^4.0.3",
     "@nestjs/core": "^11.1.2",
     "@nestjs/mapped-types": "^2.1.0",

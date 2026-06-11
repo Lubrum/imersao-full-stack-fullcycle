@@ -21,7 +21,7 @@
     "console": "ts-node -r tsconfig-paths/register src/console.ts"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.13.4",
+    "@grpc/grpc-js": "^1.14.4",
     "@grpc/proto-loader": "^0.7.15",
     "@nestjs/common": "^11.1.17",
     "@nestjs/config": "^4.0.4",
